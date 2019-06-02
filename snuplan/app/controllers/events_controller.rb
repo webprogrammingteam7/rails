@@ -1,13 +1,40 @@
 class EventsController < ApplicationController
-  def main
+	
+  #일단 액션 세팅	
+  def main #메인페이지
   end
 
-  def index
+  def index #검색된 페이지. 태그에 맞는것들만 불러오기
   end
 
-  def new
+  def show # 상세페이지
+
+  	@event = Event.find(params[:id])
   end
 
-  def show
+  def new # 게시물 올리는 페이지
   end
+
+  def edit # 올린 사람이 편집하는 페이지
+  	
+  end
+
+  def update # edit 액션의 post request
+  	
+  end
+
+  def create # new 액션의 post request
+  	
+  end
+
+  def destroy # 삭제 request . 관리자만의 기능으로 해야할듯
+  	
+  end
+
+  private # Strong Params (보안)
+		def events_params
+			params.require(:article).permit(:title, :text)
+		end
+
 end
+
