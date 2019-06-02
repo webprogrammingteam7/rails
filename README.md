@@ -1,5 +1,5 @@
 
-# Ruby on Rails로 SNUPLAN 작업 세팅 (demo 폴더)
+# Ruby on Rails로 SNUPLAN 작업 세팅
 
 # CSS 파일
 - app/assets/stylesheets/에 있는 scss 파일들로 css 작업(SASS도 가능해요)
