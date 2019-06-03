@@ -1,6 +1,31 @@
-<div class = "main" id = "blue"></div>
-<p>dd</p>
-<p>ss</p>
-<
-<div class = "main" id = "mint"></div>
-<div class = "main" id = "red"></div>
+
+<main id = "blue">
+	<div>
+		<section class = "forme_event">
+			<p>나를 위한 교내 행사 직접 찾아보기 -></p>
+		</section>
+
+		<aside class = "main_tags">
+
+			<!-- form_with는 local: true 안해주면 ajax 방식(remote: true)임!!-->
+			<%= form_with(url: events_index_path, method: "get", local: true) do %>
+
+			
+			<% @tags.each do |t| %>
+			<ul>
+				<!-- 체크박스 checked 반응 설정 모르겠다.. label이랑 id값이 같아야 되는 것 같은데.. 더 찾아봐야겠다-->
+				<li><%= check_box_tag( "tag[]", "#{t.name}")%> <%= label_tag(:t, "#{t.name}") %></li>		
+			</ul>
+			<% end %>
+			<!--search_field 속성 다시-->
+			<%= search_field(:user, :name) %>
+			<%= submit_tag("행사찾기") %>
+
+			<% end %>
+			<%= datetime_local_field(:user, :graduation_day) %>
+		</aside>
+	</div>
+</main>
+
+<main id = "mint"></main>
+<main id = "red"></main>
