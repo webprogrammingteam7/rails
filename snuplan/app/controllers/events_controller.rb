@@ -11,7 +11,6 @@ class EventsController < ApplicationController
 
   def show # 상세페이지
 
-
   	#@event = Event.find(params[:id])
   end
 

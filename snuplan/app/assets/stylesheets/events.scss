@@ -13,8 +13,8 @@ body, main, header, p, ul, ol {
 
 
 @font-face {
-font-family: 'GillSansMTUB';
-src: url('/assets/fonts/gill-sans-mt-ultra-bold.ttf');
+	font-family: 'GillSansMTUB';
+	src: url('/assets/fonts/gill-sans-mt-ultra-bold.ttf');
 }
 
 header {
@@ -31,86 +31,79 @@ header {
 	float: left;
 }
 a {
-  text-decoration: none;
-  color: #000; }
+	text-decoration: none;
+	color: #000; }
 /* a:hover 
     color: #FFD800; }
-} */
+    } */
 
-.menu {
-	 /*반응형 아님*/
-	float: right;
-	margin-right: 84px ;
-	margin-top: 30px;
-	
-}
-ul, ol {
-	list-style: none;
-}
-.menu li {
-	font-size: 20px;
-	text-align: right;
-	list-style: none;
-	width: 128px; /* 반응형 아님*/
-	margin-left: 20px;
-	display: inline;
-}
+    .menu {
+    	/*반응형 아님*/
+    	float: right;
+    	margin-right: 84px ;
+    	margin-top: 30px;
 
-
-
-/*----------- 아래는 main.html.erb -----------*/
-main {
-	width: 100%;
-	height: 1080px;	
-} 
-
-main > div {
-	/* 요거 막써논거 */
-	padding: 300px 50px 0 50px;	
-}
-
-main .forme_event {
-	float: left;
-
-}
-main .main_tags {
-	float: right;
+    }
+    ul, ol {
+    	list-style: none;
+    }
+    .menu li {
+    	font-size: 20px;
+    	text-align: right;
+    	list-style: none;
+    	width: 128px; /* 반응형 아님*/
+    	margin-left: 20px;
+    	display: inline;
+    }
 
 
-}
-#blue {
-	background-color: #13B4D1;
-}
-#mint {
-	background-color: #3BE5A3;
-}
-#red {
-	background-color: #FF7D65;
-}
+
+    /*----------- 아래는 main.html.erb -----------*/
+    main {
+    	width: 100%;
+    	height: 1080px;	
+    } 
+
+    main > div {
+    	/* 요거 막써논거 */
+    	padding: 300px 50px 0 50px;	
+    }
+
+    main .forme_event {
+    	float: left;
+
+    }
+    main .main_tags {
+    	float: right;
+
+    }
+    #blue {
+    	background-color: #13B4D1;
+    }
+    #mint {
+    	background-color: #3BE5A3;
+    }
+    #red {
+    	background-color: #FF7D65;
+    }
 
 
-/* main.html.erb 테스트중*/
-.button {
-	font-size: 30px;
+    /* main.html.erb 테스트중*/
 
-}
+    .main_tags input[type= checkbox] {
 
+    }
 
-.main_tags input[type= checkbox] {
-	
-}
+    .main_tags input[type= checkbox] + label {
+    	font-size: 20px;
+    	display: inline-block;
+    	cursor:pointer;
+    	user-select: none;
+    }
+    .main_tags input[type= checkbox]:checked + label {
+    	background-color: blue;
+    } 
+    .main_tags ul {
 
-.main_tags input[type= checkbox] + label {
-	font-size: 20px;
-	display: inline-block;
-	cursor:pointer;
-	user-select: none;
-}
-.main_tags input[type= checkbox]:checked + label {
-	background-color: blue;
-} 
-.main_tags ul {
-	
-}
+    }
 
- 
