@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'my_page/index'
+  get 'my_page/new'
+  get 'my_page/edit'
   get 'events/main'
   get 'events/index'
   get 'events/new'
@@ -9,5 +12,6 @@ Rails.application.routes.draw do
   resources :events do
 	resources :comments 
 end
+  resources :my_pages
 
 end
