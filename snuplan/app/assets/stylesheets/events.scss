@@ -5,6 +5,11 @@
 @charset "utf-8";
 /* 여기에 mainpage, index(검색결과), new(게시글 올리기) CSS 넣기 */
 
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:900&display=swap&subset=korean');
+
+
 /*----------- 아래는 layouts/application.html.erb -----------*/
 body, main, header, p, ul, ol {
 	margin: 0;
@@ -71,7 +76,9 @@ a {
 
     main .forme_event {
     	float: left;
-
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 55px;
     }
     main .main_tags {
     	float: right;
@@ -86,7 +93,16 @@ a {
     #red {
     	background-color: #FF7D65;
     }
-
+    
+    .arrow_right {
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 19px;
+        transform: rotate(-45deg);
+        margin-left: 130px;
+    
+}
 
     /* main.html.erb 테스트중*/
 
