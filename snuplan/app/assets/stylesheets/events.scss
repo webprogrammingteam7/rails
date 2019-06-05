@@ -84,6 +84,7 @@ a {
         left: 82px;
         width: 341px;
     }
+<<<<<<< HEAD
     main .month_event {
         float: left;
         font-family: 'Noto Serif KR', serif;
@@ -94,6 +95,9 @@ a {
         width: 341px;
 }
     main .main_tags {
+=======
+    main .main_tags_search {
+>>>>>>> 43feb18456db30986a49da208342afea298f9f8a
         float: left;
         margin-left: 674px;
 
@@ -118,7 +122,7 @@ a {
         left: 430px;
         background: transparent;
         border-top: 2px solid black;
-}
+    }
 
     .arrow_right:before {
         content: '';
@@ -130,7 +134,7 @@ a {
         border-top: 2px solid black;
         transform-origin: right;
         transform: rotate(45deg);
-}
+    }
 
     .arrow_right:after {
         content: '';
@@ -142,8 +146,9 @@ a {
         border-top: 2px solid black;
         transform-origin: right;
         transform: rotate(-45deg);
-}
+    }
 
+<<<<<<< HEAD
     .arrow_month {
         position: absolute;
         width: 115px;
@@ -177,21 +182,32 @@ a {
 }
 
     /* main.html.erb 테스트중*/
+=======
+    // main.html.erb 테스트중
+>>>>>>> 43feb18456db30986a49da208342afea298f9f8a
 
-    .main_tags input[type= checkbox] {
+    .main_tag {
+        display: none;
 
     }
 
-    .main_tags input[type= checkbox] + label {
-    	font-size: 20px;
+    .main_tag + label {
+    	font-size: 15px;
     	display: inline-block;
     	cursor:pointer;
     	user-select: none;
     }
-    .main_tags input[type= checkbox]:checked + label {
+    .main_tag:checked + label {
     	background-color: blue;
     } 
-    .main_tags ul {
 
+    // 태그 라벨 하나하나  
+    .main_tag > .tag_label {
+
+    }
+    
+    // 검색버튼 
+    .submit_button {
+        font-size: 25px;
     }
 

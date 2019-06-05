@@ -6,7 +6,11 @@ class EventsController < ApplicationController
   end
 
   def index #검색된 페이지. 태그에 맞는것들만 불러오기
-     render plain: params[:tag]
+   #render plain: params[:tag]
+   unless params[:tag] == nil
+     @tags = params[:tag]
+   else @tags = Tag.all
+   end
   end
 
   def show # 상세페이지
