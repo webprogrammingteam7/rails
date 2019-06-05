@@ -81,11 +81,10 @@ a {
         left: 82px;
         width: 341px;
     }
-<<<<<<< HEAD
-    #blue .main_tags_search {
-=======
-    HEAD
-    main .month_event {
+
+   
+
+    #mint .month_event {
         float: left;
         font-family: 'Noto Serif KR', serif;
         font-weight: 900;
@@ -96,9 +95,8 @@ a {
 }
 
 
-    main .main_tags_search {
+    #blue .main_tags_search {
 
->>>>>>> 04cda8f4109c1af3335d423cd3e694db10a245d7
         float: left;
         margin-left: 674px;
 
@@ -149,7 +147,6 @@ a {
         transform: rotate(-45deg);
     }
 
-     HEAD
     .arrow_month {
         position: absolute;
         width: 115px;
@@ -182,10 +179,6 @@ a {
         transform: rotate(-45deg);
 }
 
-    /* main.html.erb 테스트중*/
-
-    // main.html.erb 테스트중
-
 
     .main_tag {
         display: none;
@@ -211,13 +204,5 @@ a {
     // 검색버튼 
     .submit_button {
         font-size: 25px;
-<<<<<<< HEAD
-    }
 
-    #superContainer img {
-        
     }
-
-=======
-        }
->>>>>>> 04cda8f4109c1af3335d423cd3e694db10a245d7
