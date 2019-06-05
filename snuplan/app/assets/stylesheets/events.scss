@@ -81,10 +81,26 @@ a {
         left: 82px;
         width: 341px;
     }
+<<<<<<< HEAD
     #blue .main_tags_search {
+=======
+    HEAD
+    main .month_event {
+        float: left;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 102px;
+        left: 82px;
+        width: 341px;
+}
+
+
+    main .main_tags_search {
+
+>>>>>>> 04cda8f4109c1af3335d423cd3e694db10a245d7
         float: left;
         margin-left: 674px;
-        display: inline-block;
 
     }
     #blue {
@@ -133,7 +149,43 @@ a {
         transform: rotate(-45deg);
     }
 
+     HEAD
+    .arrow_month {
+        position: absolute;
+        width: 115px;
+        top: 1640px;
+        left: 389px;
+        background: transparent;
+        border-top: 2px solid black;
+}
+    .arrow_month:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 97px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(45deg);
+}
+
+    .arrow_month:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 97px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(-45deg);
+}
+
+    /* main.html.erb 테스트중*/
+
     // main.html.erb 테스트중
+
 
     .main_tag {
         display: none;
@@ -159,9 +211,13 @@ a {
     // 검색버튼 
     .submit_button {
         font-size: 25px;
+<<<<<<< HEAD
     }
 
     #superContainer img {
         
     }
 
+=======
+        }
+>>>>>>> 04cda8f4109c1af3335d423cd3e694db10a245d7

@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2019_06_04_180134) do
 
+  create_table "event_tags", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_tags_on_event_id"
+    t.index ["tag_id"], name: "index_event_tags_on_tag_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.datetime "date"
