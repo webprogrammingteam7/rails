@@ -67,7 +67,7 @@ a {
     /*----------- 아래는 main.html.erb -----------*/
     main {
     	width: 100%;
-    	height: 1080px;	
+        height: 1080px;
     } 
 
     main > div {
@@ -84,10 +84,18 @@ a {
         left: 82px;
         width: 341px;
     }
+    main .month_event {
+        float: left;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 102px;
+        left: 82px;
+        width: 341px;
+}
     main .main_tags {
         float: left;
         margin-left: 674px;
-        display: inline-block;
 
     }
     #blue {
@@ -131,6 +139,38 @@ a {
         width: 17px;
         top: -2px;
         left: 58px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(-45deg);
+}
+
+    .arrow_month {
+        position: absolute;
+        width: 115px;
+        top: 1640px;
+        left: 389px;
+        background: transparent;
+        border-top: 2px solid black;
+}
+    .arrow_month:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 97px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(45deg);
+}
+
+    .arrow_month:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 97px;
         border-top: 2px solid black;
         transform-origin: right;
         transform: rotate(-45deg);
