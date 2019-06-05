@@ -16,13 +16,13 @@
 			<ul>
 				<!-- 체크박스 checked 반응 설정 모르겠다.. label이랑 id값이 같아야 되는 것 같은데.. 더 찾아봐야겠다-->
 
-				<li><%= f.check_box :tag, {:id => "#{t}", multiple: true, :class => "main_tag"}, "#{t.name}", nil %>
-					<%= f.label :tag, "#{t.name}", :for => "#{t}" %></li>
+				<li><%= f.check_box :tag, {:id => "#{t}", :class =>"main_tag",multiple: true}, "#{t.name}", nil %>
+					<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"tag_label" %></li>
 			</ul>
 			<% end %>
 			<!--search_field 속성 다시-->
 			<%= search_field(:user, :name) %>
-			<%= submit_tag("행사찾기") %>
+			<%= submit_tag("행사찾기", :class =>"submit_button") %>
 
 			<% end %>
 			

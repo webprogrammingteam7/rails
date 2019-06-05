@@ -15,7 +15,7 @@
     </div>
   <% end %> 
  
- <div class = "create_form">
+ <div class = "create_form_left">
   <p>
     <%= f.label :제목 %>
     <%= f.text_field :title %>
@@ -46,10 +46,11 @@
   </p>
  </div>
 
+<div class = "create_form_right">
   <p>
     <%= f.submit %>
   </p>
- 
+</div>
 <% end %>
 
 <%= link_to '마이페이지로 가자', my_pages_path%>

@@ -84,7 +84,7 @@ a {
         left: 82px;
         width: 341px;
     }
-    main .main_tags {
+    main .main_tags_search {
         float: left;
         margin-left: 674px;
         display: inline-block;
@@ -110,7 +110,7 @@ a {
         left: 430px;
         background: transparent;
         border-top: 2px solid black;
-}
+    }
 
     .arrow_right:before {
         content: '';
@@ -122,7 +122,7 @@ a {
         border-top: 2px solid black;
         transform-origin: right;
         transform: rotate(45deg);
-}
+    }
 
     .arrow_right:after {
         content: '';
@@ -134,24 +134,32 @@ a {
         border-top: 2px solid black;
         transform-origin: right;
         transform: rotate(-45deg);
-}
+    }
 
-    /* main.html.erb 테스트중*/
+    // main.html.erb 테스트중
 
-    .main_tags input[type= checkbox] {
+    .main_tag {
+        display: none;
 
     }
 
-    .main_tags input[type= checkbox] + label {
-    	font-size: 20px;
+    .main_tag + label {
+    	font-size: 15px;
     	display: inline-block;
     	cursor:pointer;
     	user-select: none;
     }
-    .main_tags input[type= checkbox]:checked + label {
+    .main_tag:checked + label {
     	background-color: blue;
     } 
-    .main_tags ul {
 
+    // 태그 라벨 하나하나  
+    .main_tag > .tag_label {
+
+    }
+    
+    // 검색버튼 
+    .submit_button {
+        font-size: 25px;
     }
 
