@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <div id="fullpage">
 
 
@@ -9,13 +10,40 @@
 			<p>나를 위한<br>교내 행사<br>직접 찾아보기</p>
 					<i class="arrow_right"></i>
 		</section>
+=======
+<div id = "wrapper">
+	<div id = "blue" class = "section">
+		<div>
+			<section class = "forme_event">
+				<p>나를 위한<br>교내 행사<br>직접 찾아보기</p>
+			</section>
+			<i class="arrow_right"></i>
+>>>>>>> 36f69e1c7b34a61ca2d0bb97c532dcea41a52705
 
-		<aside class = "main_tags_search">
+			<aside class = "main_tags_search">
 
-			<!-- form_with는 local: true 안해주면 ajax 방식(remote: true)임!!-->
-			<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
+				<!-- form_with는 local: true 안해주면 ajax 방식(remote: true)임!!-->
+				<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
 
+				
+				<% @tags.each do |t| %>
+				<ul>
+					<!-- 체크박스 checked 반응 설정 모르겠다.. label이랑 id값이 같아야 되는 것 같은데.. 더 찾아봐야겠다-->
+
+					<li><%= f.check_box :tag, {:id => "#{t}", :class =>"main_tag",multiple: true}, "#{t.name}", nil %>
+						<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"tag_label" %></li>
+					</ul>
+					<% end %>
+					<!--search_field 속성 다시-->
+					<%= search_field(:user, :name) %>
+					<%= submit_tag("행사찾기", :class =>"submit_button") %>
+
+					<% end %>
+
+				</aside>
+			</div>
 			
+<<<<<<< HEAD
 			<% @tags.each do |t| %>
 			<ul>
 				<!-- 체크박스 checked 반응 설정 모르겠다.. label이랑 id값이 같아야 되는 것 같은데.. 더 찾아봐야겠다-->
@@ -51,3 +79,15 @@
 
 
 </div>
+=======
+		</div>
+
+		<div id = "mint" class = "section"></div>
+		<div id = "red" class = "section"></div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#wrapper').fullpage();
+			});
+		</script>
+>>>>>>> 36f69e1c7b34a61ca2d0bb97c532dcea41a52705

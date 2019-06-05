@@ -2,19 +2,23 @@
 <html>
   <head>
     <meta charset = "utf-8"> <!--이거 세팅해야되나? rails의 default를 잘 모르겠다 -->
-    <title>SNUPLAN</title>
+
+
+    <title>PLENT</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   
   </head>
 
   <body>
     <!--여기에 header랑 footer 공통으로 넣자. 모든 controller에 공통하게 들어갈 것이기 때문에. 그렇지 않다면 각 view 폴더에 _form으로 넣는게 좋다 -->
     <header>
       
-        <a class = "logo" href ="">SNUPLAN</a>
+        <a class = "logo" href ="">PLENT</a>
         <nav class = "menu">     
         <ul>
           <li>ABOUT</li>
@@ -25,7 +29,9 @@
              
     </header>
     
+    <div class = "each_html">
     <%= yield %>
+    </div>
   
   </body>
 </html>

@@ -5,6 +5,9 @@ class EventsController < ApplicationController
     @tags = Tag.all
   end
 
+  def fullpage
+    
+  end
   def index #검색된 페이지. 태그에 맞는것들만 불러오기
    #render plain: params[:tag]
    unless params[:tag] == nil

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'events/index'
   get 'events/new'
   get 'events/show'
+  get 'events/fullpage' => 'events#fullpage'
 
 
   root 'events#main'
