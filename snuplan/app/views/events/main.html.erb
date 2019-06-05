@@ -1,5 +1,6 @@
 
-<main id = "blue">
+<div id = "wrapper">
+<div id = "blue" class = "section">
 	<div>
 		<section class = "forme_event">
 			<p>나를 위한<br>교내 행사<br>직접 찾아보기</p>
@@ -18,17 +19,24 @@
 
 				<li><%= f.check_box :tag, {:id => "#{t}", :class =>"main_tag",multiple: true}, "#{t.name}", nil %>
 					<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"tag_label" %></li>
-			</ul>
-			<% end %>
-			<!--search_field 속성 다시-->
-			<%= search_field(:user, :name) %>
-			<%= submit_tag("행사찾기", :class =>"submit_button") %>
+				</ul>
+				<% end %>
+				<!--search_field 속성 다시-->
+				<%= search_field(:user, :name) %>
+				<%= submit_tag("행사찾기", :class =>"submit_button") %>
 
-			<% end %>
-			
-		</aside>
-	</div>
-</main>
+				<% end %>
 
-<main id = "mint"></main>
-<main id = "red"></main>
+			</aside>
+		</div>
+	
+</div>
+
+	<div id = "mint" class = "section"></div>
+	<div id = "red" class = "section"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#wrapper').fullpage();
+		});
+	</script>

@@ -2,12 +2,19 @@
 <html>
   <head>
     <meta charset = "utf-8"> <!--이거 세팅해야되나? rails의 default를 잘 모르겠다 -->
+
+
+
+
+
     <title>SNUPLAN</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   
   </head>
 
   <body>
@@ -25,7 +32,9 @@
              
     </header>
     
+    <div class = "each_html">
     <%= yield %>
+    </div>
   
   </body>
 </html>

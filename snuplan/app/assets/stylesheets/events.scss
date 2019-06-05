@@ -11,7 +11,7 @@
 
 
 /*----------- 아래는 layouts/application.html.erb -----------*/
-body, main, header, p, ul, ol {
+body,  header, p, ul, ol {
 	margin: 0;
 	padding: 0;
 }
@@ -27,7 +27,9 @@ header {
 	height: 71px; /*반응형 아님 */
 	border-bottom: solid black 1px;
     position: fixed;
+    z-index: 1;
 }
+
 .logo {
 	font-family: 'GillSansMTUB';
 	font-size: 35px;
@@ -39,44 +41,39 @@ header {
 a {
 	text-decoration: none;
 	color: #000; }
-/* a:hover 
-    color: #FFD800; }
-    } */
+
 
     .menu {
-    	/*반응형 아님*/
-    	float: right;
-    	margin-right: 84px ;
-    	margin-top: 30px;
+        /*반응형 아님*/
+        float: right;
+        margin-right: 84px ;
+        margin-top: 30px;
 
     }
     ul, ol {
-    	list-style: none;
+        list-style: none;
     }
     .menu li {
-    	font-size: 20px;
-    	text-align: right;
-    	list-style: none;
-    	width: 128px; /* 반응형 아님*/
-    	margin-left: 20px;
-    	display: inline;
+        font-size: 20px;
+        text-align: right;
+        list-style: none;
+        width: 128px; /* 반응형 아님*/
+        margin-left: 20px;
+        display: inline;
     }
-
-
 
     /*----------- 아래는 main.html.erb -----------*/
-    main {
-    	width: 100%;
-    	height: 1080px;	
-    } 
+    /*main {
+        width: 100%;
+        height: 1080px;	
+    } */
 
-    main > div {
-    	/* 요거 막써논거 */
-    	padding: 408px 50px 0 82px;	
+    #blue > div {
+       
+        padding: 0px 50px 0 82px;	
     }
-
-    main .forme_event {
-    	float: left;
+    #blue .forme_event {
+        float: left;
         font-family: 'Noto Serif KR', serif;
         font-weight: 900;
         font-size: 55px;
@@ -84,20 +81,20 @@ a {
         left: 82px;
         width: 341px;
     }
-    main .main_tags_search {
+    #blue .main_tags_search {
         float: left;
         margin-left: 674px;
         display: inline-block;
 
     }
     #blue {
-    	background-color: #13B4D1;
+        background-color: #13B4D1;
     }
     #mint {
-    	background-color: #3BE5A3;
+        background-color: #3BE5A3;
     }
     #red {
-    	background-color: #FF7D65;
+        background-color: #FF7D65;
     }
 
 
@@ -154,12 +151,17 @@ a {
     } 
 
     // 태그 라벨 하나하나  
-    .main_tag > .tag_label {
+    .main_tags_search .tag_label {
+        font-size: 20px;
 
     }
     
     // 검색버튼 
     .submit_button {
         font-size: 25px;
+    }
+
+    #superContainer img {
+        
     }
 
