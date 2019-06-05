@@ -73,7 +73,7 @@ a {
     	float: left;
 
     }
-    main .main_tags {
+    main .main_tags_search {
     	float: right;
 
     }
@@ -90,20 +90,20 @@ a {
 
     /* main.html.erb 테스트중*/
 
-    .main_tags input[type= checkbox] {
+    .main_tag input[type= checkbox] {
 
     }
 
-    .main_tags input[type= checkbox] + label {
-    	font-size: 20px;
+    .main_tag + label {
+    	font-size: 30px;
     	display: inline-block;
     	cursor:pointer;
     	user-select: none;
     }
-    .main_tags input[type= checkbox]:checked + label {
+    .main_tag:checked + label {
     	background-color: blue;
     } 
-    .main_tags ul {
+    .main_tag ul {
 
     }
 
