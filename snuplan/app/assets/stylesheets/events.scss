@@ -5,6 +5,11 @@
 @charset "utf-8";
 /* 여기에 mainpage, index(검색결과), new(게시글 올리기) CSS 넣기 */
 
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:900&display=swap&subset=korean');
+
+
 /*----------- 아래는 layouts/application.html.erb -----------*/
 body, main, header, p, ul, ol {
 	margin: 0;
@@ -21,6 +26,7 @@ header {
 	width : 100%;
 	height: 71px; /*반응형 아님 */
 	border-bottom: solid black 1px;
+    position: fixed;
 }
 .logo {
 	font-family: 'GillSansMTUB';
@@ -66,15 +72,22 @@ a {
 
     main > div {
     	/* 요거 막써논거 */
-    	padding: 300px 50px 0 50px;	
+    	padding: 408px 50px 0 82px;	
     }
 
     main .forme_event {
     	float: left;
-
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 102px;
+        left: 82px;
+        width: 341px;
     }
-    main .main_tags_search {
-    	float: right;
+    main .main_tags {
+        float: left;
+        margin-left: 674px;
+        display: inline-block;
 
     }
     #blue {
@@ -88,22 +101,57 @@ a {
     }
 
 
+
+    /*화살표 픽셀이 미묘하게 안맞음*/
+    .arrow_right {
+        position: absolute;
+        width: 74px;
+        top: 664px;
+        left: 430px;
+        background: transparent;
+        border-top: 2px solid black;
+}
+
+    .arrow_right:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 58px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(45deg);
+}
+
+    .arrow_right:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        top: -2px;
+        left: 58px;
+        border-top: 2px solid black;
+        transform-origin: right;
+        transform: rotate(-45deg);
+}
+
     /* main.html.erb 테스트중*/
 
-    .main_tag input[type= checkbox] {
+    .main_tags input[type= checkbox] {
 
     }
 
-    .main_tag + label {
-    	font-size: 30px;
+    .main_tags input[type= checkbox] + label {
+    	font-size: 20px;
     	display: inline-block;
     	cursor:pointer;
     	user-select: none;
     }
-    .main_tag:checked + label {
+    .main_tags input[type= checkbox]:checked + label {
     	background-color: blue;
     } 
-    .main_tag ul {
+    .main_tags ul {
 
     }
 
