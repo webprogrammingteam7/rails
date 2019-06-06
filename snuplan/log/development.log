@@ -3746,3 +3746,138 @@ Processing by EventsController#main as HTML
 Completed 200 OK in 1088ms (Views: 1034.2ms | ActiveRecord: 3.7ms)
 
 
+Started GET "/events/fullpage" for ::1 at 2019-06-06 15:28:01 +0900
+Processing by EventsController#fullpage as HTML
+  Rendering events/fullpage.html.erb within layouts/application
+  Rendered events/fullpage.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_sysopen - /home/mog2512/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb):
+    1: 
+    2: <div id="wrapper">
+    3: 	<div class = "section" style ="background-color: ">
+    4: 		<%= month_calendar do |date| %>
+    5: 			<p class = "td"><%= date.day  %></p>
+    6: 		<% end %></div>
+    7: 	<div class = "section"><%= image_tag "bg2.jpg" %></div>
+  
+app/views/events/fullpage.html.erb:4:in `_app_views_events_fullpage_html_erb___352194837000467707_70189865570620'
+Started GET "/events/fullpage" for ::1 at 2019-06-06 15:29:52 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mog2512/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#fullpage as HTML
+  Rendering events/fullpage.html.erb within layouts/application
+  Rendered events/fullpage.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_sysopen - /home/mog2512/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb):
+    1: 
+    2: <div id="wrapper">
+    3: 	<div class = "section" style ="background-color: ">
+    4: 		<%= month_calendar do |date| %>
+    5: 			<p class = "td"><%= date.day  %></p>
+    6: 		<% end %></div>
+    7: 	<div class = "section"><%= image_tag "bg2.jpg" %></div>
+  
+app/views/events/fullpage.html.erb:4:in `_app_views_events_fullpage_html_erb__2762606396307038787_69846641643360'
+Started GET "/events/main" for ::1 at 2019-06-06 15:31:36 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (52.7ms)
+Started GET "/events/mian" for ::1 at 2019-06-06 15:31:37 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"mian"}
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 726ms (Views: 669.8ms | ActiveRecord: 3.3ms)
+
+
+Completed 200 OK in 232ms (Views: 222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/mian" for ::1 at 2019-06-06 15:31:40 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"mian"}
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 130ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:16 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 152ms (Views: 145.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:17 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 119ms (Views: 111.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:17 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 139ms (Views: 130.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:18 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 199ms (Views: 191.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:18 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 119ms (Views: 108.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:39:18 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 124ms (Views: 111.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:41:57 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 130ms (Views: 114.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/main" for ::1 at 2019-06-06 15:48:35 +0900
+Processing by EventsController#main as HTML
+  Rendering events/main.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/events/main.html.erb:16
+  Rendered events/main.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 147ms (Views: 137.7ms | ActiveRecord: 0.5ms)
+
+
