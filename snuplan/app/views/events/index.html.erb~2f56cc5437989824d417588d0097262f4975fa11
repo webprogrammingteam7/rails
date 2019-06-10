@@ -1,0 +1,89 @@
+<div>
+
+	<div id="index-search">
+		<%= search_field(:user, :name, :class=>"search") %>
+		<%= submit_tag("행사찾기", :class=>"search-button")%>
+	
+	</div>
+
+
+
+<aside>
+	<div class="tag-container">
+		<div class="tag-item">
+			<input type="checkbox" name="chk_info" value="세미나">세미나<br>
+			<input type="checkbox" name="chk_info" value="취업/창업">취업/창업<br>
+			<input type="checkbox" name="chk_info" value="공연/전시">공연/전시<br>
+			<input type="checkbox" name="chk_info" value="이벤트">이벤트<br>
+			<input type="checkbox" name="chk_info" value="봉사">봉사<br>
+			<input type="checkbox" name="chk_info" value="어학">어학<br>
+			<input type="checkbox" name="chk_info" value="경제/금융">경제/금융<br>
+			<input type="checkbox" name="chk_info" value="경영/컨설팅">경영/컨설팅<br>
+			<input type="checkbox" name="chk_info" value="정치/사회">정치/사회<br>
+			<input type="checkbox" name="chk_info" value="IT/기술">IT/기술<br>
+			<input type="checkbox" name="chk_info" value="문화/예술">문화/예술<br>
+
+		</div>
+	</aside>
+	<!--section에는 포스터가 들어갑니다-->
+	<section id="index_poster">
+		<div class="index_poster">
+			<a href="">
+				<div class="poster_wrapper">
+					<div class="poster"><img src = "../img.jpg"></img></div>
+				</div>
+				<a href="">
+					<div class="poster_wrapper">
+						<div class="poster"><img src = "../img.jpg"></img></div>
+					</div>
+					<a href="">
+						<div class="poster_wrapper">
+							<div class="poster"><img src = "../img.jpg"></img></div>
+						</div>
+					</div>
+
+
+					<div class="index_poster">
+						<a href="">
+							<div class="poster_wrapper">
+								<div class="poster"><img src = "../img.jpg"></img></div>
+							</div>
+							<a href="">
+								<div class="poster_wrapper">
+									<div class="poster"><img src = "../img.jpg"></img></div>
+								</div>
+								<a href="">
+									<div class="poster_wrapper">
+										<div class="poster"><img src = "../img.jpg"></img></div>
+									</div>
+								</div>
+
+
+								<div class="index_poster">
+									<a href="">
+										<div class="poster_wrapper">
+											<div class="poster"><img src = "../img.jpg"></img></div>
+										</div>
+										<a href="">
+											<div class="poster_wrapper">
+												<div class="poster"><img src = "../img.jpg"></img></div>
+											</div>
+											<a href="">
+												<div class="poster_wrapper">
+													<div class="poster"><img src = "../img.jpg"></img></div>
+												</div>
+											</div>
+
+										</section>
+
+
+
+
+
+										<!--input type="checkbox" id=""-->
+
+
+
+
+
+    <!--검색창-->

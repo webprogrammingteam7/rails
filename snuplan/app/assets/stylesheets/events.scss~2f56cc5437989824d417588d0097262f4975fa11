@@ -8,11 +8,10 @@
 
 /* 웹폰트 */
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:900&display=swap&subset=korean');
-@import url('https://fonts.googleapis.com/cssfamily=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
 
 
 /*----------- 아래는 layouts/application.html.erb -----------*/
-body,  header, p, ul, ol, section {
+body,  header, p, ul, ol {
 	margin: 0;
 	padding: 0;
 }
@@ -29,7 +28,6 @@ header {
 	border-bottom: solid black 1px;
     position: fixed;
     z-index: 1;
-   
 }
 
 .logo {
