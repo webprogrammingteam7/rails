@@ -1,11 +1,67 @@
 
 <div id="wrapper">
 	<div class = "section" style ="background-color: ">
-		<%= month_calendar do |date| %>
-			<p class = "td"><%= date.day  %></p>
-		<% end %></div>
-	<div class = "section"><%= image_tag "bg2.jpg" %></div>
-	<div class = "section"><%= image_tag "bg2.jpg" %></div>
+		<%= month_calendar do |dat| %>
+		
+			<p class = "td">
+				
+
+   <button id="myBtn"><%= dat.day %></button>
+ 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>                                                               
+        <p>하하하</p>
+      </div>
+ 
+    </div>
+				
+				
+   				<% @month_events.each do |m|%>
+
+   				<% if m.date.day == dat.day %>
+
+   							<!-- Trigger/Open The Modal -->
+ 
+
+   				<span data-tooltip-text = "CSS 툴팁으로 만들기 좀더 찾아봐야겠다">
+   				<%= m.title %>
+   			</span>
+   				<% end %>
+   				
+
+				
+				<% end %>
+				</p>
+		
+		<% end %>
+
+		
+				
+rai
+
+	</div>
+
+
+	<div class = "section">
+		<div class = "o">
+
+
+		</div>
+	</div>
+	
+
+
+	<div class = "section">
+		<div class = "o">
+			<section class = "t">
+				<h1>감사합니다</p>
+			</section>
+		</div>
+	</div>
 	
 </div>
 <script type="text/javascript">

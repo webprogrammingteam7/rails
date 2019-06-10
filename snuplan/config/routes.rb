@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get 'events/new'
   get 'events/show'
   get 'events/fullpage' => 'events#fullpage'
-
+  post 'events/index' => 'events#index', defaults: {format: 'js'}
+  post 'events/show' => 'events#show', defaults: {format: 'js'}
 
   root 'events#main'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
