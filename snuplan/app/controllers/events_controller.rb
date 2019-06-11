@@ -2,7 +2,18 @@ class EventsController < ApplicationController
 	
   #일단 액션 세팅	
   def main #메인페이지
-    @tags = Tag.all
+    @tags1 = Tag.first(4)
+    @tags2 = Tag.last(7)
+    @events = Event.all
+
+
+
+    
+    @this_month = Time.now.month
+    t = Time.now
+    #이번달 범위 설정
+    @month_range = t.beginning_of_month..t.end_of_month
+    @month_events = Event.where(:date => @month_range)
   end
 
   def fullpage
@@ -58,14 +69,22 @@ end
 
 
 end
+  
 
 
 
 
+  def show # 상세페이지
+    @events = Array.new
+    if params[:id]
 
-  def show # 상세페이지.. 현재 무한루프에 빠지는 상태 ㅠㅠ 파일 이름 탓인거 같은데 ;;;
-
-  	@event = Event.find(params[:id])
+  	@events.push(Event.find(params[:id]))
+    #@events.push(@event)
+  elsif params[:ids]
+    params[:ids].each do |q|
+      @events.push(Event.find(q))
+    end
+  end
     respond_to do |format|
       format.js { render 'show' }
     end

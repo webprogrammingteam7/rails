@@ -1,7 +1,10 @@
 class MyPagesController < ApplicationController
    def index #내가 좋아요한 event id값으로 불러오기
   	#좋아요에서 삭제 기능도 넣어야
-  	render plain: params[:event]
+
+    #좋아요한 이벤트 변수
+    @like_events = Event.all
+  	
   end
 
   def my_post #내가 게시한 event 목록

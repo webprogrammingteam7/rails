@@ -1,0 +1,16 @@
+.email , .password, .button, .signup_link {
+		width: 99px;
+	font-size: 40px;
+}
+
+.email > label {
+	display: none;
+}
+
+.password > label {
+	display: none;
+}
+
+.login_div {
+	background-color: black;
+}

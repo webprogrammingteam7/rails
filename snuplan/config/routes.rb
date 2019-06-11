@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get 'my_pages/index'
   get 'my_pages/my_post'
   get 'my_pages/new'
+
+  #로그인관련
+  devise_for :users
+  #
+
   post 'my_pages/index' => 'my_pages#index'
  
   get 'events/main'
