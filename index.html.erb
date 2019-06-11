@@ -1,51 +1,59 @@
-<!--<h1>마이페이지 메인화면(내가 찜한 이벤트 목록)</h1>-->
-<!--<%=link_to '내가 찜한 행사', my_pages_index_path %>
-<%=link_to '행사 올리기', my_pages_new_path %>
-<%=link_to '등록한 행사', my_pages_new_path %>
-<%=link_to '내 정보 관리', my_pages_new_path %>-->
+<div id = "index_main"
+<div>
+	<div id="index-search">
+		<%= search_field(:user, :name, :class=>"search") %>
+		<%= submit_tag("search", :class=>"search-button")%>
+	<!--	<%= submit_tag("tag", :class=>"tag-button")%>-->
+	</div>
+	<!--search_field 속성 다시-->
 
-<div class="my_pages_buttoncontainer">
-      	<button class="my_pages_button1">내가 찜한 행사</button>
-        <button class="my_pages_button2">행사 등록하기</button>
-        <button class="my_pages_button3">등록한 행사</button>
-        <button class="my_pages_button4">내 정보 관리</button>
+
+<aside>
+	<div class="index_tag-container">
+		<div class="index_tag-item">
+		<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
+		<% @tags.each do |t| %>
+		<ul>
+			<li><%= f.check_box :tag, {:id => "#{t}", :class =>"index_tag",multiple: true}, "#{t.name}", nil %>
+				<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"index_tag_label" %></li>
+		</ul>
+			<% end %>
+			<% end %>
+	</div>
+	</aside>
+
+	<!--section에는 포스터가 들어갑니다-->
+
+	<div id = "before_search">
+
+
+	<section id="index_poster">
+		<% @s.each do |t| %>
+	 <div class="index_poster">
+		<%= t.text %></div>
+		<p class="index_postertitle"><%= link_to "#{t.title}", events_show_path(:id => t.id), remote: true, method: "post"%></p>
+
+
+ <%end%>
+	</section>
+	</div>
+
+	<div id = "search_results" class = "search_results">
+	</div>
 </div>
 
-<section>
-  <div class="my_pages_container">
-    <article>
-      <!-- list를 보여주는 공간입니다-->
-      <div class="list-container" style = "margin-top: 0">
-                    <div class="list-leftitem">
-                        <div class="list1">
-                            <p><%= @event.title%></p>
-                            <input type="checkbox" id="mark_my_pages">
-                        </div>
-                        <div class="list2">
-                            <p id="date">3월 25일 10:00<!--<%= @event.date %>--></p>
-                            <p><%= @event.location %></p>
-                        </div>
-                        <div class="list3">
-                            <p><%= @event.text %>전 세계 인구의 반이 넘는 그리스도인과 무슬림의 화해와 평화적 공존이 절대적으로 필요한 이유를 ‘인류형제애’ 선언에 비추어 짚어보고, 교황의 아라비아 반도행의 의미를 그리스도교와 이슬람교의 만남과 충돌의 역사적 맥락 안에서 찾아보며
-현대 무슬림 세계의 변화를 엿보고자 합니다.</p>
-                        </div>
-                        <div class="list4">
-                            <p class="marginright">eventtag1</p>
-                            <p>eventtag2</p>
-                        </div>
-                    </div>
-                    <div class="list-rightitem">
-                      <div class="list-poster"
-                        <img src = "../img.jpg"></img>
-                    </div>
-                    </div>
-                </div>
 
- </section>
 
-<!--선택 삭제, 모두 삭제, 캡쳐하기, 카카오톡으로 보내기-->
-<aside id="side-button">
-    <!--<%= submit_tag("search", :class=>"search-button")%>-->
-            <button class="img_download">img download</button>
-        <button class="mypages_kakaotalk">kakao</button>
-       </aside>
+	<div id = "show" class = "index_aside">
+
+
+
+	</div>-
+
+
+	<!-- <section id="index_poster">
+	 <div class="index_poster">
+			<a href="">
+				<div class="poster_wrapper">
+					<div class="poster"><img src = "../img.jpg"></img></div>
+				</div> -->
