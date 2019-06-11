@@ -1,0 +1,142 @@
+	/*index.html.erb*/
+			#index_main{
+				max-width:50%;
+				border-right: 2px solid black;
+				height: 100%;
+				position: absolute;
+				float:left
+			}
+				#index-search{
+					display: inline-block;
+					margin-left: 7%;
+					margin-top: 85px;
+
+					width: 100%;
+
+
+				}
+
+
+
+				.search {
+					font-size: 25px;
+					font-family:'Noto Sans KR', sans-serif;
+					width: 70%;
+					height: 74px;
+					outline: none;
+					border: 2px solid black;
+					float:left;
+				}
+
+				.search-button{
+					padding: 15px;
+					border: 2px solid black;
+					background-color:#3BE5A3;
+					width: 15%;
+					height: 74px;
+					text-align: center;
+					font-family:'GillSansMTUB';
+					font-size: 1vw;
+					margin-left: -3px;
+				}
+
+
+				/*tag*/
+				.index_tag-container {
+					box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+
+					padding-bottom: 5px;
+					padding-left: 5px;
+					width: 84%;
+					height: 120px;
+					margin-top: 14px;
+					margin-left: 7%;
+					margin-bottom: 20px;
+					float:left;
+
+
+
+				 }
+
+				.index_tag{
+						display: none;
+
+
+				}
+				.index_tag + label{
+					float: left;
+						flex-direction:row;
+						font-size: 1vw;
+						font-family: 'Noto Sans KR', sans-serif;
+						border: 1px solid black;
+						padding-top: 11px;
+		//			margin-top: -3px;margin-left:-2px;margin-bottom: -1px;
+						width: 213px;
+						height: 29.8725px;
+			    	cursor: pointer;
+			    	user-select: none;
+						text-align: center;
+						padding-left:7px
+
+
+				}
+
+
+		    .index_tag:checked + label {
+		    /*주제*/	background-color:#FFD800;
+				 /*분류 background-color: #FF7D65*/
+		    }
+
+
+
+
+		/*	.tag-button{
+				position: relative;
+				padding: 15px;
+				border: 2px solid black;
+				background-color:#FFD800;
+				width: 146px;
+				height: 74px;
+				text-align: center;
+				font-family:'GillSansMTUB';
+				font-size: 20px;
+				margin-left:-7px;
+		}*/
+
+
+		/*	#tag-button:active{	}*/
+
+
+
+					/*hover??에 대해 알아볼 것 */
+
+		/*poster*/
+				#index_poster{
+					padding-left: 7%;
+					position: relative;
+					float: left;
+					display: inline-block;
+					font-family: 'Noto Sans KR', sans-serif;
+					overflow: hidden;
+				}
+					.index_poster  {
+						display: inline;
+						float:left;
+						position: relative;
+						width : 276.45px;
+						height: 389.84px;
+						border: 2px solid black;
+						box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+
+						margin-right:18px;
+						margin-bottom:80px
+			  }
+
+					.index_postertitle{
+						display:block;
+						float: left;
+						position: relative;
+						margin-top:420px;
+						margin-left:-27%;
+
+					}

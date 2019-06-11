@@ -1,0 +1,59 @@
+<div id = "index_main"
+<div>
+	<div id="index-search">
+		<%= search_field(:user, :name, :class=>"search") %>
+		<%= submit_tag("search", :class=>"search-button")%>
+	<!--	<%= submit_tag("tag", :class=>"tag-button")%>-->
+	</div>
+	<!--search_field 속성 다시-->
+
+
+<aside>
+	<div class="index_tag-container">
+		<div class="index_tag-item">
+		<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
+		<% @tags.each do |t| %>
+		<ul>
+			<li><%= f.check_box :tag, {:id => "#{t}", :class =>"index_tag",multiple: true}, "#{t.name}", nil %>
+				<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"index_tag_label" %></li>
+		</ul>
+			<% end %>
+			<% end %>
+	</div>
+	</aside>
+
+	<!--section에는 포스터가 들어갑니다-->
+
+	<div id = "before_search">
+
+
+	<section id="index_poster">
+		<% @s.each do |t| %>
+	 <div class="index_poster">
+		<%= t.text %></div>
+		<p class="index_postertitle"><%= link_to "#{t.title}", events_show_path(:id => t.id), remote: true, method: "post"%></p>
+
+
+ <%end%>
+	</section>
+	</div>
+
+	<div id = "search_results" class = "search_results">
+	</div>
+</div>
+
+
+
+	<div id = "show" class = "index_aside">
+
+
+
+	</div>-
+
+
+	<!-- <section id="index_poster">
+	 <div class="index_poster">
+			<a href="">
+				<div class="poster_wrapper">
+					<div class="poster"><img src = "../img.jpg"></img></div>
+				</div> -->

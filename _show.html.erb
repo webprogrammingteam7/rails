@@ -1,0 +1,47 @@
+
+
+
+
+
+  <section id="eventdetail">
+  <!--전체 상세 페이지 영역입니다-->
+    <!--행사 이름을 보여주는 영역입니다-->
+    <div class="event-name">
+
+      <% if @events %>
+      <% @events.each do |e| %>
+
+
+    <p><%= e.title%></p>
+    </div>
+      <!--행사 정보를 보여주는 영역입니다-->
+      <div class="event-info">
+          <ul class=eventinfo><div class="event-info_firstitem">
+          <li class = "col-1"> 일시 <%= e.date %></li>
+          <li class = "col-1"> 장소 <%= e.location %></li>
+          <li class = "col-1"> tag <%= e.location %></li></ul>
+        </div>
+      <div class="event-info_seconditem">
+        <span class="col-1">  본문 <%= e.text %></span>
+            </div>
+
+
+
+
+  <!--poster를 보여주는 영역입니다.-->
+    <div class="show_poster">
+      <div class="show-poster_wrapper">
+     </div></div>
+
+     <% end %>
+     <% end %>
+
+
+  <aside id="side-button">
+    <!--<%= submit_tag("search", :class=>"search-button")%>-->
+
+            <button class="like">like</button>
+        <!--<button class="kakaotalk">kakao</button>-->
+        </aside>
+
+        </section>
