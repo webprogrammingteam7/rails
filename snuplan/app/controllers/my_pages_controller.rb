@@ -1,4 +1,6 @@
 class MyPagesController < ApplicationController
+
+   # before_action :authenticate_user!
    def index #내가 좋아요한 event id값으로 불러오기
   	#좋아요에서 삭제 기능도 넣어야
 

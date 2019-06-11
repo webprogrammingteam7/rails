@@ -1,32 +1,33 @@
 class EventsController < ApplicationController
 	
   #일단 액션 세팅	
+
+  before_action :authenticate_user!, except: [:main, :index]
   def main #메인페이지
     @tags1 = Tag.first(4)
     @tags2 = Tag.last(7)
     @events = Event.all
 
-
-
-    
-    @this_month = Time.now.month
+   @this_month = Time.now.month
     t = Time.now
     #이번달 범위 설정
     @month_range = t.beginning_of_month..t.end_of_month
     @month_events = Event.where(:date => @month_range)
   end
 
-  def fullpage
-    @this_month = Time.now.month
+  ##def fullpage
+   # @this_month = Time.now.month
     #month_events = Event.where(title: "두번쨰 행사")
-    t = Time.now
-    @month_range = t.beginning_of_month..t.end_of_month
-    @month_events = Event.where(:date => @month_range)
+   # t = Time.now
+   # @month_range = t.beginning_of_month..t.end_of_month
+   # @month_events = Event.where(:date => @month_range)
     #@month_events = Event.where(:date.month => (Time.now.month))
     #@month_events = Event.where('extract(month from date) = ?', @this_month)
     
    # @month_events = Event.where("cast(strftime('%m', date) as int) = ?", @this_month)
- end
+ #end
+
+
   def index #검색된 페이지. 태그에 맞는것들만 불러오기
 
    @a = Array.new
@@ -114,7 +115,7 @@ end
    params.require(:event).permit(:title, :text)
  end
 
-    #선택된 Tag id로 Tag db 찾는 함수
+    #선택된 Tag id로 Tag db 찾는 함수. 아직 실패한 함수
     def selected_tags
       params[:tag].each do |t|
        @t = Tag.find_by(:id => "#{t}")
