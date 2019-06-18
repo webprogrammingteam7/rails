@@ -34,12 +34,12 @@
 		<p>
 			
 			<%= f.label :태그, :class => "label_name" %>
-			<%= f.fields_for :tags, @event.tags.build do |q|%>
+			
 			<div class= "tag_field">
-				<%= render 'events/tag_box', q: q  %>
+				<%= render 'events/tag_box', f: f  %>
 					
 			</div>
-			<% end %>
+			
 		</p>
 	</div>
 

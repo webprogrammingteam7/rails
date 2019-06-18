@@ -37,7 +37,14 @@ class MyPagesController < ApplicationController
   def create # new 액션의 post request
   	@event = Event.new(event_params)
 
-  	
+     
+      #if tag_params
+      #  tag_params.each do|w|
+      if params['event']['id']
+      params['event']['id'].each do |w|
+        @event.tags << Tag.find_by_id(w)
+      end
+      end	
     
   	if @event.save #model validation 통과해서 만들어치면 true
   		#redirect_to @event #my_post로 가도록 재설정해야
@@ -59,8 +66,8 @@ class MyPagesController < ApplicationController
   	params.require(:event).permit!
   end
 
-  def tag_params
-  	params.require(:event).permit(:tag)
+  def tag_params #strong
+  	params.require(:event).permit({ id: [] })
   	
   end
 

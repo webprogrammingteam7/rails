@@ -1,8 +1,8 @@
 <div class = "tag_box">	
 		<ul>		
 			<% @tags.each do |t| %>
-			<li><%= q.check_box :id, {:id => "#{t}", :class =>"index_tag", multiple: true}, "#{t.id}", nil %>
-				<%= q.label :id, "#{t.name}", :for => "#{t}" %></li>
+			<li><%= f.check_box :id, {:id => "#{t}", :class =>"index_tag", multiple: true}, "#{t.id}", nil %>
+				<%= f.label :id, "#{t.name}", :for => "#{t}" %></li>
 				<% end %>
 			<li>x이미지</li>
 		</ul>
