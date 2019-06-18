@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'my_pages/new'
   get 'my_pages/edit'
   get 'my_pages/index'
+  post 'my_pages/new' => 'my_pages/new', defaults: {format: 'js'}
   #로그인관련
   devise_for :users
   # 

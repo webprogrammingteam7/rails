@@ -2,7 +2,7 @@
 <div class = "buttons">
 	<ul>	
 		<li><%= button_to "내가 찜한 행사", action: "new" %></li>
-		<li><%= button_to "행사 등록하기", action: "new" %></li>
+		<li><%= button_to "행사 등록하기", action: "new", remote: true, method: "post" %></li>
 		<li><%= button_to "등록한 행사", action: "new" %></li>
 		<li><%= button_to "내 정보 관리", action: "new" %></li>
 	</ul>
@@ -14,7 +14,7 @@
 
 </div>
 
-<section>
+<section id = "like_list">
 	<% @user_events.each do |e|%>
 	<div class="my_pages_container">
 		<!-- list를 보여주는 공간입니다-->
@@ -30,6 +30,7 @@
 				</div>
 				<div class="list3">
 					<p><%= e.text%></p>
+					
 				</div>
 				<div class="list4">
 					<p class="marginright"></p>
@@ -43,6 +44,7 @@
 			</div>
 		</div>
 		<% end %>
-	</section>                                                
+	</section> 
+	<section id = "new_event"></section>                                               
 
 

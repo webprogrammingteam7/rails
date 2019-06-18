@@ -9,6 +9,14 @@ class MyPagesController < ApplicationController
   	@event = Event.new # db 안넣은 빈 모델
   	@year = Time.now.year
   	@tags = Tag.all
+
+
+  	if request.post?
+        respond_to do |format|
+        format.js { render 'new'}
+         end
+      end
+
   end
 
   def edit # 올린 사람이 편집하는 페이지
