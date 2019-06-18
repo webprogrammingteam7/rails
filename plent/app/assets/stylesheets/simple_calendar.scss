@@ -1,0 +1,183 @@
+@media all and (min-width:320px) {
+    
+    .simple-calendar {
+height: 100%;
+
+
+ .calendar-heading {
+  display: none;
+ }
+
+  table {
+        width: 100%;
+    height: 100%;
+   
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  tr {
+    border-collapse: collapse;
+    }
+
+  th {
+    padding: 6px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+      font-family: 'Noto Sans KR', sans-serif;
+        font-size: 3vw;
+        font-weight: 100;
+  }
+
+  td {
+    //padding: 6px;
+    text-align: center;
+    //height: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+  }
+ 
+
+    
+   button > a{
+    font-size: 6vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+  }
+    
+
+  .day {
+    height: 80px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background: white;
+  }
+
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  /*.prev-month {
+    background: #DDD;
+  }
+  .next-month {
+    background: #DDD;
+  }*/
+  .current-month {}
+
+  .has-events {}
+}
+
+    
+
+}
+
+
+
+
+@media all and (min-width:1024px) {
+
+
+.simple-calendar {
+height: 100%;
+
+
+ .calendar-heading {
+  display: none;
+ }
+
+  table {
+        width: 100%;
+    height: 100%;
+   
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  tr {
+    border-collapse: collapse;
+    }
+
+  th {
+    padding: 6px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+      font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5625vw;
+        font-weight: 100;
+  }
+
+  td {
+    //padding: 6px;
+    text-align: center;
+    //height: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+  }
+ 
+
+    
+   button > a{
+    font-size: 3.3vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+  }
+    
+
+  .day {
+    height: 80px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background: white;
+  }
+
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  /*.prev-month {
+    background: #DDD;
+  }
+  .next-month {
+    background: #DDD;
+  }*/
+  .current-month {}
+
+  .has-events {}
+}
+
+}

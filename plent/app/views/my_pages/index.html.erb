@@ -1,0 +1,48 @@
+
+<div class = "buttons">
+	<ul>	
+		<li><%= button_to "내가 찜한 행사", action: "new" %></li>
+		<li><%= button_to "행사 등록하기", action: "new" %></li>
+		<li><%= button_to "등록한 행사", action: "new" %></li>
+		<li><%= button_to "내 정보 관리", action: "new" %></li>
+	</ul>
+</div>
+
+
+<div>
+	
+
+</div>
+
+<section>
+	<% @user_events.each do |e|%>
+	<div class="my_pages_container">
+		<!-- list를 보여주는 공간입니다-->
+		<div class="list-container" style = "margin-top: 0">
+			<div class="list-leftitem">
+				<div class="list1">
+					<p><%= e.title %></p>
+					<input type="checkbox" id="mark_my_pages">
+				</div>
+				<div class="list2">
+					<p id="date"><%= e.date %></p>
+					<p></p>
+				</div>
+				<div class="list3">
+					<p><%= e.text%></p>
+				</div>
+				<div class="list4">
+					<p class="marginright"></p>
+					<p></p>
+				</div>
+			</div>
+			<div class="list-rightitem">
+				<div class="list-poster" style="max-height: 100%">
+					<%= image_tag e.image.card.url %>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</section>                                                
+
+

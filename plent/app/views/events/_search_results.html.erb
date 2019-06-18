@@ -1,0 +1,9 @@
+<% @s.each do |a|%>
+<div class = "event_card">
+<p><% if a.image%>
+	<%= image_tag a.image.card.url %>
+	<% end %></p>
+<!-- 위에가 사진 / 밑에가 행사 제목 -->
+<p><%= link_to "#{a.title}", events_show_path(:id => a.id), remote: true, method: "post"%></p>
+</div>
+<% end %>

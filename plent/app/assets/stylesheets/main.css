@@ -1,0 +1,357 @@
+@media all and (min-width:320px){
+
+.forme_event {
+        float: left;
+        position: absolute;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 7vw;
+        line-height: 11vw;
+        margin-left: 30px;
+        width: 45%;
+        top: 15%;        
+    }
+        .bluearrow {
+        float: left;
+        position: relative;
+        width: 23.36%;
+        margin-top: 12%;
+        left: -8%;
+        transform: rotate(90deg);
+}
+
+
+#blue {
+        background-color: #13B4D1;
+}
+
+     #blue .main_tags_search {
+        position: absolute;
+        top: 58%;
+        left: 30px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 40px;
+        width: 14.375%;
+        height: 388px;
+            
+        
+    }
+
+    .main_tag {
+        display: none;
+    }
+
+    .main_tag + label {
+    	cursor: pointer;
+        display: inline-block;
+    	user-select: none;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        width: 140px;
+        height: 40px;
+        text-align: center;
+        margin-top: -1px;
+    }
+    .main_tag:checked + label {
+    	font-weight: 900;
+    } 
+    
+    .tag2{
+        margin-left: 160px;
+        position: relative;
+        top: -164px;
+}
+    .tag1{
+        margin-left: 0px;
+}
+    
+    #event {
+        position: absolute;
+        right: 30px;
+        left: auto;
+        width: 88%;
+        border: 2px solid black;
+        height: 55px;
+        top: 47%;
+    }
+    
+    .main_search input[type=search] {
+        font-size: 20px;
+        padding: 14px;
+    }
+    
+    
+    .submit_button {
+        position: absolute;
+        right: 30px;
+        left: auto;
+        top: 57.7%;
+        font-size: 20px;
+        width: 128px;
+        height: 46px;
+        border: 2px solid black;
+        background-color: #FF7D65;
+        font-family: 'GillSansMTUB';
+
+    }
+
+ #mint {
+        background-color: #3BE5A3;
+    }
+
+    #mint .month_event {
+
+        float: left;
+        position: absolute;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 7vw;
+        line-height: 11vw;
+        margin-left: 30px;
+        width: 45%;
+        top: 15%;
+}
+    .mintarrow {
+        position: relative;
+        float: left;
+        width: 36%;
+        left: -14%;
+        margin-top: 18%;
+        transform: rotate(90deg);
+}
+
+    .mint_calender {
+        float: right;
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        width: 90%;
+        height: 50%;
+    }
+
+
+    #red {
+        background-color: #FF7D65;
+    }
+
+
+    #red .month_event {
+
+        float: left;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 7vw;
+        line-height: 11vw;
+        margin-left: 30px;
+        width: 45%;
+        position: absolute;
+        top: 15%;
+}
+    .redarrow {
+        position: relative;
+        float: left;
+        width: 36%;
+        left: -14%;
+        margin-top: 18%;
+        transform: rotate(90deg);
+    
+}
+
+    .red_about {
+        float: left;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 6.3vw;
+        line-height: 12vw;
+        width: 88%;
+        margin-top: 55%;
+        margin-left: 30px;
+}
+
+}
+
+
+@media all and (min-width:1024px) {
+
+.forme_event {
+        float: left;
+        position: absolute;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 2.8646vw;
+        line-height: 5.3125vw;
+        margin-left: 82px;
+        width: 17.76%;
+        top: 35%;
+        
+    }
+
+        .bluearrow {
+        float: left;
+        position: relative;
+        width: 23.36%;
+        margin-top: -18%;
+        left: 101%;
+        transform: rotate(0deg);
+}
+
+
+#blue {
+        background-color: #13B4D1;
+}
+ 
+
+
+    #blue .main_tags_search {
+        position: absolute;
+        top: 38%;
+        left: 35.1%;
+        right: auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        font-size: 23px;
+        line-height: 55px;
+        width: 29.8%;
+       
+     
+        
+    }
+
+    .main_tag {
+        display: none;
+    }
+
+      
+    .main_tag + label {
+    	cursor: pointer;
+        display: inline-block;
+    	user-select: none;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        width: 45%;
+        height: 55px;
+        text-align: center;
+        margin-top: -1px;
+        border-collapse: collapse;
+    }
+    .main_tag:checked + label {
+    	font-weight: 900;
+    } 
+    
+    .tag2{
+        left: 20%;
+        position: relative;
+        top: -224px;
+        width: 100%;
+}
+    .tag1{
+        margin-left: 0px;
+}
+    
+    #event {
+        position: absolute;
+        right: 82px;
+        left: auto;
+        width: 22.083%;
+        border: 2px solid black;
+        height: 55px;
+        top: 38%
+    }
+    
+    .main_search input[type=search] {
+        font-size: 20px;
+        padding: 14px;
+    }
+    
+    
+    .submit_button {
+        position: absolute;
+        right: 82px;
+        left: auto;
+        font-size: 23px;
+        width: 128px;
+        height: 46px;
+        border: 2px solid black;
+        background-color: #FF7D65;
+        font-family: 'GillSansMTUB';
+
+    }
+
+
+ #mint {
+        background-color: #3BE5A3;
+    }
+
+    #mint .month_event {
+
+        float: left;
+        position: absolute;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 2.8646vw;
+        line-height: 5.3125vw;
+        margin-left: 82px;
+        width: 17.76%;
+        top: 47%;
+}
+    .mintarrow {
+        position: relative;
+        float: left;
+        width: 36%;
+        left: 88%;
+        margin-top: -18%;
+        transform: rotate(0deg);
+}
+
+    .mint_calender {
+        float: right;
+        position: absolute;
+        top: 18%;
+        right: 82px;
+        width: 53.958%;
+        height: 73%;
+        
+}
+
+
+    #red {
+        background-color: #FF7D65;
+    }
+
+
+    #red .month_event {
+
+        float: left;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 900;
+        font-size: 2.8646vw;
+        line-height: 5.3125vw;
+        margin-left: 82px;
+        width: 17.76%;
+        position: absolute;
+        top: 47%;
+}
+    .redarrow {
+        position: relative;
+        float: left;
+        width: 36%;
+        left: 88%;
+        margin-top: -18%;
+        transform: rotate(0deg);
+    
+}
+
+    .red_about {
+        float: right;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        font-size: 3.90625vw;
+        line-height: 6.5vw;
+        width: 60.625%;
+        margin-top: 5%;
+        margin-right: 82px;
+}
+
+}

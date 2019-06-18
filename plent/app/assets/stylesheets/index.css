@@ -1,0 +1,75 @@
+/* index 페이지 왼쪽 */
+.index_left {
+	width: 50%;
+	min-width: 50%;
+	position:absolute;
+	float: left;
+	top: 100px;
+}
+/* index 페이지 오른쪽 - show 뜨는 부분*/
+.index_right {
+	width: 50%;
+	float: right;
+	position: relative;
+}
+
+/* 태그 박스 설정 */
+.tag_box {
+	width: 90%;
+	position: relative;
+}
+
+.tag_box > ul li {
+	float: left;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 16%;	
+}
+.index_tag {
+	display: none;
+}
+.index_tag + label {
+	cursor: pointer;
+
+}
+/* 태그 눌렀을 때 색 변하기 */
+.index_tag:checked + label {
+    	font-weight: 900;
+    	background-color: yellow;
+    }  
+/* 검색창 설정 */      
+ #insearch_field {
+ 	height: 100px;
+ 	max-height: 30px;
+ }
+/* 검색 버튼 설정 */
+ .search-button {
+        position: absolute;
+
+        right: 82px;
+        left: auto;
+        font-size: 23px;
+        width: 128px;
+        height: 46px;
+        border: 2px solid black;
+        background-color: #FF7D65;
+        font-family: 'GillSansMTUB';
+        }
+
+/* 행사 카드 */
+ .event_card {
+ 	width: 200px;
+ 	max-width: 200px;
+ 	height: 300px;
+ 	max-height: 300px;
+ 	border: 1px solid black;
+ 	display: inline-block;
+ }
+ .event_card img {
+ 	max-width: 100%;
+ 	max-height: 100%;
+
+ }
+ #before_search #search_result {
+
+ }

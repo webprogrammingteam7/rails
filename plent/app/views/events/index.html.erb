@@ -1,0 +1,25 @@
+<section class = index_left>
+	<%= form_with( url: events_index_path, method: "post", class: "main_tags_form", class: "hahaha") do |q| %>
+	<div id="index-search">
+
+		<%= submit_tag("행사찾기", :class=>"search-button")%>
+		<%= q.search_field :event, id: 'insearch_field' %>
+
+	</div>
+	<div>
+	<!-- _tag_box.html.erb 불러오기 -->
+	<%= render 'tag_box', q: q %>
+	</div>
+	<% end %>
+
+		<div id = "before_search">
+			<%= render 'search_results' %>
+		</div>
+		<div id = "search_results">
+		</div>
+	</section>
+
+	<aside class = index_right>
+		<div id = "show">
+		</div>
+	</aside>

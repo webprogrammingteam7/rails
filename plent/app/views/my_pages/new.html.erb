@@ -1,0 +1,74 @@
+<div class = "my_page_new">
+
+	<%= form_with model: @event, scope: :event, url: my_pages_path, local: true do |f| %>
+
+	<div class = "create_form_left">
+		<p>
+			<%= f.label :제목, :class => "label_name" %>
+			<%= f.text_field :title, :class => "title_field" %>
+		</p>
+		<p>
+			<%= f.label :일시, :class => "label_name" %>
+			<%= f.datetime_select :date, start_year: @year, ampm: true, prompt: {month: '월', day: '일', hour: '시간' }, :class => "datetime_select" %>
+		</p>
+		<p>
+			<%= f.label :이미지, :class => "label_name" %>
+			<!-- edit 페이지에서 사용할 미리보기 -->
+			<%= image_tag(@event.image_url) if @event.image? %>
+			<%= f.file_field :image, :class => "image_field" , :onchange => "previewFile();"%>
+			<!-- 이미지 프리뷰 -->
+			<img src="" height="200">
+			<%= f.hidden_field :image_cache %>
+
+		</p>
+
+		<p>
+			<%= f.label :장소, :class => "label_name" %>
+			<%= f.text_field :location, :class => "location_field" %>
+		</p>
+		<p>
+			<%= f.label :본문, :class => "label_name" %>
+			<%= f.text_area :text, :class => "text_field" %>
+		</p>
+
+		<p>
+			
+			<%= f.label :태그, :class => "label_name" %>
+			<%= f.fields_for :tags, @event.tags.build do |q|%>
+			<div class= "tag_field">
+				<%= render 'events/tag_box', q: q  %>
+					
+			</div>
+			<% end %>
+		</p>
+	</div>
+
+		<div class = "create_form_right">
+		<p>
+		  <%= f.submit("행사찾기", :class =>"submit") %>
+		</p>
+	</div>
+
+	<% end %>
+
+</div>
+
+<script>
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+</script>
+
+
+
+

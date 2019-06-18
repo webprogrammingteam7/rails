@@ -1,7 +1,0 @@
-{
-  "name": "snuplan",
-  "private": true,
-  "dependencies": {
-    "micromodal": "^0.4.0"
-  }
-}

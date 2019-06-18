@@ -1,0 +1,87 @@
+<div class = "wrapper">
+	<div id = "blue" class = "section">
+		<div class = "bluemargin">
+
+			<section class = "forme_event">
+				<p>나를 위한<br>교내 행사<br>직접 찾아보기</p>
+				<%= image_tag "bluearrow.png", :class => "bluearrow" %>
+			</section>
+
+			<aside class = "main_tags_search">
+
+				<!-- form_with는 local: true 안해주면 ajax 방식(remote: true)임!!-->
+				<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
+				
+				<% @tags1.each do |t| %>
+				<ul class ="tag1">
+					<li><%= f.check_box :tag, {:id => "#{t}", :class =>"main_tag",multiple: true}, "#{t.id}", nil %>
+						<%= f.label :tag, "#{t.name}", :for => "#{t}" %></li>
+					</ul>
+					<% end %>
+
+					<% @tags2.each do |t| %>
+					<ul class ="tag2">
+
+						<li><%= f.check_box :tag, {:id => "#{t}", :class =>"main_tag",multiple: true}, "#{t.id}", nil %>
+							<%= f.label :tag, "#{t.name}", :for => "#{t}" %></li>
+						</ul>
+						<% end %>
+
+					</aside>
+
+					<ul class = "main_search">
+						<li><%= f.search_field :event %>
+							<%= submit_tag("Search", :class =>"submit_button") %> </li>
+						</ul>
+
+						<% end %>
+					</div>
+				</div>
+
+				<div id = "mint" class = "section">
+
+					<section class = "month_event">
+						<p>이달의 행사</p> 
+						<%= image_tag "mintarrow.png", :class => "mintarrow" %>
+					</section>
+
+					<aside class = "mint_calender">
+						<%= month_calendar do |dat| %>
+						
+						<!-- 툴팁 css가 적용 안되는 문제. simple calendar 때문인듯...-->
+
+						<% a = Array.new %>
+						<% @month_events.each do |m| %>
+						<% if m.date.day == dat.day %>
+						<% a.push(m) %>
+						<% end %>
+						<% end %>
+
+						<button class="myBtn"><%= link_to "#{dat.day}", events_show_path(:ids => a.map(&:id)), remote: true, method: "post"%></button> 
+
+						<% end %>
+					</aside>
+					<!-- Trigger/Open The Modal -->
+					<!-- 날짜누르면  모달 뜸 -->
+					<div id="myModal" class="modal">
+
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<div id = "show"></div>								
+						</div>
+					</div>
+				</div>
+
+				<div id = "red" class = "section">
+					<div class = "bluemargin">
+						<section class = "month_event">
+							<p>더 알아보기</p>
+							<%= image_tag "mintarrow.png", :class => "redarrow" %>
+						</section>
+						<aside class = "red_about">
+							<p> PLENT는 관심있는 교내 행사를 골라 한눈에 모아볼 수 있는 검색 웹 서비스입니다. 2019년도 웹프로그래밍 과제로 금진섭, 박나윤, 조가영이 만들었습니다.</p>
+						</aside>
+					</div>
+				</div>
+			</div>

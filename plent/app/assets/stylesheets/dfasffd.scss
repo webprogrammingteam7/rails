@@ -1,0 +1,195 @@
+// Place all the styles related to the My_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// -----my_pages/index 기본으로 보이는 찜한 목록 페이지
+
+//마이페이지의 버튼
+.my_pages_buttoncontainer{
+	display: flex;
+	margin-left:120px;
+	justify-content: center;
+	padding-top: 99px;
+}
+.my_pages_button1, .my_pages_button2, .my_pages_button3, .my_pages_button4{
+	display: inline-block;
+	font-size: 16px;
+	width: 254px;
+	height: 80px;
+	border: 2px solid black;
+	float:left;
+}
+
+/*.my_pages_button1, .my_pages_button2, .my_pages_button3, .my_pages_button4 + label{
+	background-color: #FFD800}
+*/
+
+//찜한페이지 전체 영역
+section{
+    flex: 1 1 auto;
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+article{
+    display:flex;
+    flex-direction: column;
+    margin-left: 120px;
+		margin-top: 28px;
+    }
+
+
+
+
+
+
+		/*list 2분할(좌,우)*/
+.list-container{
+    display: flex;
+    width:1016px;
+		height:265px;
+    border: 2px solid black;
+		box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    margin: 39px;
+
+    input{
+        float:right;
+				margin: 0px;
+				outline: none;
+				width:30px;
+				height:30px;
+				border: 1px solid black
+    }
+}
+
+/*list-left 세로 4분할*/
+.list-leftitem {
+    display: flex;
+    flex-direction: column;
+    width:830px;
+		overflow: hidden;
+		font-family: 'Noto Sans KR';
+    }
+
+
+		/*list font&stylying*/
+		.list1 p{
+		  font-family: "Noto Sans KR" bold, sans-serif;
+			font-size: 25px;
+		    display: inline;
+		}
+		.list2 p{
+			font-family: "Noto Sans KR" bold, sans-serif;
+			font-size: 23px;
+		    display: inline;
+				padding-left: 15px
+		}
+		.list3 p{
+			font-family: "Noto Sans KR", sans-serif;
+			font-size: 16px;
+		  	display: inline;
+
+		}
+		.list4 p{
+			font-family: "Noto Sans KR", sans-serif;
+		 font-size: 18px;
+		    display: inline-block;
+		}
+
+
+
+/*list3(description) 글자수 제한(3줄, '...'표시)*/
+.list3{
+    line-height: 1.6;
+    max-height: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+.list1 , .list2 , .list3, .list4{
+    padding: {
+        top: 12px;
+        bottom: 7px;
+        left: 15px;
+        right: 15px;
+    }
+		border-bottom: 1px solid black;
+}
+
+.list4{
+	border-bottom: none /*밑줄 중복현상 제거*/}
+.list4 p{
+	padding: {
+			top: 5px;
+			bottom: 5px;
+			left: 145px;
+			right: 145px;
+	}
+	margin-right:4px;
+
+}
+.list4 p.marginright{
+border-right: 1px solid black;
+}
+
+.list-rightitem{
+    width: 186px;
+    padding: {
+        top: 5px;
+        bottom: 5px;
+        left: 10px;
+        right: 10px;
+    }
+    border-left: 1px solid black;
+}
+
+
+#date {
+    padding-right: 130px;
+		padding-left: 0px;
+    border-right: 1px solid black;
+}
+
+
+
+#side-button{
+	display: flex;
+	flex-direction:row
+}
+
+.img_download {
+	text-align: center;
+	font-size: 20px;
+	padding: 15px;
+	width: 150px; height: 100px;
+	border: 2px solid black;
+	background-color: #3BE5A3;
+	font-family: 'GillSansMTUB';
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+	margin-left:1800px;
+	margin-bottom:10px
+}
+
+.mypages_kakaotalk{
+    float:left;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 100px; height: 100px;
+    border: 2px solid black;
+    background-color: #FFD800;
+    font-family: 'GillSansMTUB';
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-left:1800px;
+  }
