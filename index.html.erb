@@ -1,59 +1,43 @@
-<div id = "index_main"
-<div>
-	<div id="index-search">
-		<%= search_field(:user, :name, :class=>"search") %>
-		<%= submit_tag("search", :class=>"search-button")%>
-	<!--	<%= submit_tag("tag", :class=>"tag-button")%>-->
-	</div>
-	<!--search_field 속성 다시-->
 
-
-<aside>
-	<div class="index_tag-container">
-		<div class="index_tag-item">
-		<%= form_with(url: events_index_path, method: "get", local: true) do |f| %>
-		<% @tags.each do |t| %>
-		<ul>
-			<li><%= f.check_box :tag, {:id => "#{t}", :class =>"index_tag",multiple: true}, "#{t.name}", nil %>
-				<%= f.label :tag, "#{t.name}", :for => "#{t}", :class =>"index_tag_label" %></li>
-		</ul>
-			<% end %>
-			<% end %>
-	</div>
-	</aside>
-
-	<!--section에는 포스터가 들어갑니다-->
-
-	<div id = "before_search">
-
-
-	<section id="index_poster">
-		<% @s.each do |t| %>
-	 <div class="index_poster">
-		<%= t.text %></div>
-		<p class="index_postertitle"><%= link_to "#{t.title}", events_show_path(:id => t.id), remote: true, method: "post"%></p>
-
-
- <%end%>
-	</section>
-	</div>
-
-	<div id = "search_results" class = "search_results">
-	</div>
+<div class = "buttons">
+	<ul>
+		<li><%= button_to "내가 찜한 행사", action: "new" %></li>
+		<li><%= button_to "행사 등록하기", action: "new", remote: true, method: "post" %></li>
+		<li><%= button_to "등록한 행사", action: "new" %></li>
+		<li><%= button_to "내 정보 관리", action: "new" %></li>
+	</ul>
 </div>
 
 
 
-	<div id = "show" class = "index_aside">
+
+<section id = "like_list">
+	<% @user_events.each do |e|%>
+	<div class="my_pages_container">
 
 
 
-	</div>-
+		<!--표 영역-->
+		<div class="like_table">
+		<div class="th"><p><%= e.title %></p></div>
+		<div class="td1"><p><%= e.date %></p>	</div>
+		<div class="td2"><p><%= e.location %></p></div>
+			<p><%= e.text%>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<div class="show_tag"><p>태그1<!-- tag--></p><p>태그2<!-- tag--></p>
+			</div></div>
+
+			<!--포스터영역-->
+		<div class="list-poster" style="max-height: 100%">
+			  <%=image_tag "bluearrow.png" %>
+		</div>
+		<% end %>
+
+	</section>
 
 
-	<!-- <section id="index_poster">
-	 <div class="index_poster">
-			<a href="">
-				<div class="poster_wrapper">
-					<div class="poster"><img src = "../img.jpg"></img></div>
-				</div> -->
+	<aside id="my_pages_side-button">
+		<!--<%= submit_tag("search", :class=>"search-button")%>-->
+
+		<button class="kakaotalk">kakao</button>
+		<!--<button class="kakaotalk">kakao</button>-->
+	</aside>
